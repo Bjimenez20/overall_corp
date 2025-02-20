@@ -13,7 +13,7 @@ $(window).on("load", function () {
          scrollTop: $(this.hash).offset().top
       }, 1200);
    });
-   
+
 
 });
 
@@ -48,7 +48,7 @@ jQuery(function ($) {
          $(".navbar").removeClass("fixedmenu");
       }
    });
-   
+
    if ($("nav.navbar").hasClass("fixed-bottom")) {
       var navHeight = $(".fixed-bottom").offset().top;
       $(window).scroll(function () {
@@ -334,7 +334,7 @@ jQuery(function ($) {
 
    /*Owl Carousel*/
    /*Testimonial 3 cols*/
-   $("#testimonial-slider, #team_slider , #news_slider").owlCarousel({
+   $("#team_slider , #news_slider").owlCarousel({
       items: 3,
       autoplay: 2500,
       autoplayHoverPause: true,
@@ -358,6 +358,26 @@ jQuery(function ($) {
          },
       }
    });
+
+   $('.owl-carousel').owlCarousel({
+      items: 3,
+      autoplayHoverPause: true,
+      loop: true,
+      margin: 30,
+      dots: true,
+      nav: false,
+      responsive: {
+         0: {
+            items: 1
+         },
+         600: {
+            items: 3
+         },
+         1000: {
+            items: 3
+         }
+      }
+   })
 
    /*Services Box Slider*/
    $("#services-slider").owlCarousel({
@@ -434,12 +454,12 @@ jQuery(function ($) {
       }
    });
    function callback() {
-      if($("body").hasClass("rtl-layout")){
+      if ($("body").hasClass("rtl-layout")) {
          rtl: true
       }
-    }
-   
-   
+   }
+
+
    /*----- Parallax Backgrounds -----*/
    if (windowsize > 992) {
       $(".parallaxie").parallaxie({
@@ -567,9 +587,9 @@ jQuery(function ($) {
       gridheight: [600, 500, 500, 350],
       lazyType: "none",
       parallax: {
-         type:"scroll",
-         origo:"slidercenter",
-         speed:1000,
+         type: "scroll",
+         origo: "slidercenter",
+         speed: 1000,
          levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50],
       },
       shadow: 0,
@@ -664,7 +684,7 @@ jQuery(function ($) {
          disableFocusListener: false,
       }
    });
-   
+
    /*thumbs*/
    $("#thumb-banner").show().revolution({
       sliderType: "standard",
@@ -696,7 +716,7 @@ jQuery(function ($) {
             v_align: "bottom",
             h_offset: 0,
             v_offset: 20
-        },
+         },
          touch: {
             touchenabled: "on",
             swipe_threshold: 75,
@@ -820,7 +840,7 @@ jQuery(function ($) {
          disableFocusListener: false,
       }
    });
-   
+
    /*animated elements hero banner*/
    $("#rev_single").show().revolution({
       sliderType: "hero",
@@ -872,19 +892,19 @@ jQuery(function ($) {
       mediaQueries: [{
          width: 1500,
          cols: 4
-          }, {
+      }, {
          width: 1100,
          cols: 4
-          }, {
+      }, {
          width: 800,
          cols: 3
-          }, {
+      }, {
          width: 480,
          cols: 2
-          }, {
+      }, {
          width: 320,
          cols: 1
-          }],
+      }],
    });
 
    /*Testimonials Grids*/
@@ -898,19 +918,19 @@ jQuery(function ($) {
       mediaQueries: [{
          width: 1500,
          cols: 4
-          }, {
+      }, {
          width: 1100,
          cols: 4
-          }, {
+      }, {
          width: 800,
          cols: 3
-          }, {
+      }, {
          width: 480,
          cols: 2
-          }, {
+      }, {
          width: 320,
          cols: 1
-          }],
+      }],
    });
 
    /*Gallery without spaces*/
@@ -925,16 +945,16 @@ jQuery(function ($) {
       mediaQueries: [{
          width: 1500,
          cols: 3,
-        }, {
+      }, {
          width: 1100,
          cols: 3,
-        }, {
+      }, {
          width: 800,
          cols: 3,
-        }, {
+      }, {
          width: 480,
          cols: 2,
-        }],
+      }],
    });
 
 
@@ -944,8 +964,8 @@ jQuery(function ($) {
       separator: ",",
       speed: 2000,
    });
-   
-   
+
+
    /* Initializing Particles */
    if ($("#particles-js").length) {
       window.onload = function () {
@@ -958,8 +978,8 @@ jQuery(function ($) {
          });
       };
    }
-   
-   
+
+
    /*Wow Animations*/
    if ($(".wow").length) {
       var wow = new WOW({
