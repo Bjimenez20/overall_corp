@@ -336,26 +336,21 @@ jQuery(function ($) {
    /*Testimonial 3 cols*/
    $("#team_slider , #news_slider").owlCarousel({
       items: 3,
-      autoplay: 2500,
       autoplayHoverPause: true,
       loop: true,
       margin: 30,
       dots: true,
       nav: false,
-      rtl: callback,
       responsive: {
-         1280: {
-            items: 3,
-         },
-         980: {
-            items: 3,
+         0: {
+            items: 1
          },
          600: {
-            items: 2,
+            items: 3
          },
-         320: {
-            items: 1,
-         },
+         1000: {
+            items: 3
+         }
       }
    });
 
