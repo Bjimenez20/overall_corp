@@ -262,56 +262,38 @@ jQuery(function ($) {
    }
 
    //contact form
-   $("#btn_submit").on("click", function () {
-      //get input field values
-      var user_name = $('input[name=name]').val();
-      var user_email = $('input[name=email]').val();
-      var user_website = $('input[name=website]').val();
-      var user_message = $('textarea[name=message]').val();
-      var post_data, output;
-      //simple validation at client's end
-      var proceed = true;
-      if (user_name == "") {
-         proceed = false;
-      }
-      if (user_email == "") {
-         proceed = false;
-      }
-      if (user_message == "") {
-         proceed = false;
-      }
 
-      //everything looks good! proceed...
-      if (proceed) {
-         //alert(proceed);
-         //data to be sent to server
-         post_data = {
-            'userName': user_name,
-            'userEmail': user_email,
-            'userWebsite': user_website,
-            'userMessage': user_message
-         };
+   // $("#contact-form").on("submit", function (e) {
+   //    e.preventDefault();
 
-         //Ajax post data to server
-         $.post('contact_me.php', post_data, function (response) {
+   //    var post_data = {
+   //       userName: $('input[name=name]').val(),
+   //       userLastName: $('input[name=last_name]').val(),
+   //       userEmail: $('input[name=email]').val(),
+   //       userPhone: $('input[name=phone]').val(),
+   //       userTypeContact: $('select[name=type_contact]').val(),
+   //       userMessage: $('textarea[name=message]').val()
+   //    };
 
-            //load json data from server and output message     
-            if (response.type == 'error') {
-               output = '<div class="alert-danger" style="padding:10px; margin-bottom:10px;">' + response.text + '</div>';
-            } else {
-               output = '<div class="alert-success" style="padding:10px; margin-bottom:10px;">' + response.text + '</div>';
+   //    var proceed = Object.values(post_data).every(value => value.trim() !== "");
+   //    if (!proceed) {
+   //       $("#result").html('<div class="alert-danger" style="padding:10px; margin-bottom:10px;">Todos los campos son obligatorios.</div>').slideDown();
+   //       return;
+   //    }
 
-               //reset values in all input fields
-               $('.form-inline input').val('');
-               $('.form-inline textarea').val('');
-               $('#btn_submit').val('Submit');
-            }
+   //    $.post('controllers/contact_me.php', post_data, function (response) {
+   //       let output;
+   //       if (response.type === 'error') {
+   //          output = '<div class="alert-danger" style="padding:10px; margin-bottom:10px;">' + response.text + '</div>';
+   //       } else {
+   //          output = '<div class="alert-success" style="padding:10px; margin-bottom:10px;">' + response.text + '</div>';
+   //          $("#contact-form")[0].reset();
+   //          console.log(response.text)
+   //       }
+   //       $("#result").hide().html(output).slideDown();
+   //    }, 'json');
+   // });
 
-            $("#result").hide().html(output).slideDown();
-         }, 'json');
-
-      }
-   });
 
 
    //reset previously set border colors and hide all message on .keyup()
