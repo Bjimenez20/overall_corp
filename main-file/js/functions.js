@@ -75,7 +75,7 @@ jQuery(function ($) {
 
    if (navigator.userAgent.match(/msie/i) || navigator.userAgent.match(/trident/i)) {
       $(".rev_overlay").addClass("d-none");
-      $("#rev_slider_video .rs-fullvideo-cover").css("background", "rgba(0,0,0,0)");
+      $("#rev_slider_one .rs-fullvideo-cover").css("background", "rgba(0,0,0,0)");
    }
    $(document).on('contextmenu', function () {
       return false;
@@ -304,15 +304,18 @@ jQuery(function ($) {
    // ************ Fun Facts
    $(".number-counters").appear(function () {
       $(".number-counters [data-to]").each(function () {
-         var e = $(this).attr("data-to");
-         $(this).delay(6e3).countTo({
-            from: 1,
-            to: e,
-            speed: 3500,
-            refreshInterval: 50
-         })
-      })
-   });
+          var e = $(this).attr("data-to").replace(/[^0-9]/g, ""); // Eliminar caracteres no numéricos
+          e = parseInt(e, 10) || 0; // Convertir a número y evitar NaN
+  
+          $(this).delay(6000).countTo({
+              from: 1,
+              to: e,
+              speed: 3500,
+              refreshInterval: 50
+          });
+      });
+  });
+  
 
    /*Owl Carousel*/
    /*Testimonial 3 cols*/
@@ -348,10 +351,10 @@ jQuery(function ($) {
             items: 1
          },
          600: {
-            items: 3
+            items: 4
          },
          1000: {
-            items: 3
+            items: 4
          }
       }
    })
@@ -540,52 +543,219 @@ jQuery(function ($) {
    });
 
    /*Video bg*/
-   $("#rev_slider_video").show().revolution({
-      sliderType: "standard",
-      sliderLayout: "fullscreen",
-      scrollbarDrag: "true",
-      dottedOverlay: "none",
-      navigation: {
-         touch: {
-            touchenabled: "on",
-            swipe_threshold: 75,
-            swipe_min_touches: 1,
-            swipe_direction: "horizontal",
-            drag_block_vertical: false,
-         }
-      },
-      viewPort: {
-         enable: true,
-         outof: "pause",
-         visible_area: "90%"
-      },
-      responsiveLevels: [4096, 1024, 778, 480],
-      gridwidth: [1140, 1024, 768, 480],
-      gridheight: [600, 500, 500, 350],
-      lazyType: "none",
-      parallax: {
-         type: "scroll",
-         origo: "slidercenter",
-         speed: 1000,
-         levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50],
-      },
-      shadow: 0,
-      spinner: "off",
-      stopLoop: "off",
-      stopAfterLoops: -1,
-      stopAtSlide: -1,
-      shuffle: "off",
-      autoHeight: "off",
-      hideThumbsOnMobile: "off",
-      hideSliderAtLimit: 0,
-      hideCaptionAtLimit: 0,
-      hideAllCaptionAtLilmit: 0,
-      debugMode: false,
-      fallbacks: {
-         simplifyAll: "off",
-         nextSlideOnWindowFocus: "off",
-         disableFocusListener: false,
+   var tpj = jQuery;
+   var revapi486;
+   tpj(document).ready(function () {
+      if (tpj("#rev_slider_one").revolution == undefined) {
+         revslider_showDoubleJqueryError("#rev_slider_one");
+      } else {
+         revapi486 = tpj("#rev_slider_one").show().revolution({
+            sliderType: "standard",
+            jsFileLocation: "plugins/revolution/js/",
+            sliderLayout: "auto",
+            dottedOverlay: "on",
+            delay: 15000,
+            navigation: {
+               keyboardNavigation: "off",
+               keyboard_direction: "horizontal",
+               mouseScrollNavigation: "off",
+               mouseScrollReverse: "default",
+               onHoverStop: "off",
+               touch: {
+                  touchenabled: "on",
+                  touchOnDesktop: "off",
+                  swipe_threshold: 75,
+                  swipe_min_touches: 1,
+                  swipe_direction: "horizontal",
+                  drag_block_vertical: false
+               },
+               arrows: {
+                  style: "uranus",
+                  enable: true,
+                  hide_onmobile: true,
+                  hide_under: 600,
+                  hide_onleave: true,
+                  tmp: '',
+                  left: {
+                     h_align: "left",
+                     v_align: "center",
+                     h_offset: 15,
+                     v_offset: 0
+                  },
+                  right: {
+                     h_align: "right",
+                     v_align: "center",
+                     h_offset: 15,
+                     v_offset: 0
+                  }
+               }
+            },
+            visibilityLevels: [1200, 1040, 802, 480],
+            responsiveLevels: [4096, 1024, 778, 480],
+            gridwidth: [1140, 1024, 768, 480],
+            gridheight:[1000,700,700,700],
+            lazyType: "none",
+            shadow: 0,
+            spinner: "off",
+            stopLoop: "off",
+            stopAfterLoops: -1,
+            stopAtSlide: -1,
+            shuffle: "off",
+            autoHeight: "off",
+            hideThumbsOnMobile: "off",
+            hideSliderAtLimit: 0,
+            hideCaptionAtLimit: 0,
+            hideAllCaptionAtLilmit: 0,
+            debugMode: false,
+            fallbacks: {
+               simplifyAll: "off",
+               nextSlideOnWindowFocus: "off",
+               disableFocusListener: false,
+            }
+         });
       }
+
+
+      if (tpj("#rev_slider_two").revolution == undefined) {
+         revslider_showDoubleJqueryError("#rev_slider_two");
+      } else {
+         revapi486 = tpj("#rev_slider_two").show().revolution({
+            sliderType: "standard",
+            jsFileLocation: "plugins/revolution/js/",
+            sliderLayout: "auto",
+            dottedOverlay: "on",
+            delay: 10000,
+            navigation: {
+               keyboardNavigation: "off",
+               keyboard_direction: "horizontal",
+               mouseScrollNavigation: "off",
+               mouseScrollReverse: "default",
+               onHoverStop: "off",
+               touch: {
+                  touchenabled: "on",
+                  touchOnDesktop: "off",
+                  swipe_threshold: 75,
+                  swipe_min_touches: 1,
+                  swipe_direction: "horizontal",
+                  drag_block_vertical: false
+               },
+               arrows: {
+                  style: "uranus",
+                  enable: true,
+                  hide_onmobile: true,
+                  hide_under: 600,
+                  hide_onleave: true,
+                  tmp: '',
+                  left: {
+                     h_align: "left",
+                     v_align: "center",
+                     h_offset: 15,
+                     v_offset: 0
+                  },
+                  right: {
+                     h_align: "right",
+                     v_align: "center",
+                     h_offset: 15,
+                     v_offset: 0
+                  }
+               }
+            },
+            visibilityLevels: [1200, 1040, 802, 480],
+            responsiveLevels: [4096, 1024, 778, 480],
+            gridwidth: [1140, 1024, 768, 480],
+            // gridheight: [600, 500, 500, 350],
+            gridheight:[690,690,600,600],
+            lazyType: "none",
+            shadow: 0,
+            spinner: "off",
+            stopLoop: "off",
+            stopAfterLoops: -1,
+            stopAtSlide: -1,
+            shuffle: "off",
+            autoHeight: "off",
+            hideThumbsOnMobile: "off",
+            hideSliderAtLimit: 0,
+            hideCaptionAtLimit: 0,
+            hideAllCaptionAtLilmit: 0,
+            debugMode: false,
+            fallbacks: {
+               simplifyAll: "off",
+               nextSlideOnWindowFocus: "off",
+               disableFocusListener: false,
+            }
+         });
+      }
+
+      if (tpj("#rev_slider_three").revolution == undefined) {
+         revslider_showDoubleJqueryError("#rev_slider_three");
+      } else {
+         revapi486 = tpj("#rev_slider_three").show().revolution({
+            sliderType: "standard",
+            jsFileLocation: "plugins/revolution/js/",
+            sliderLayout: "auto",
+            dottedOverlay: "on",
+            delay: 10000,
+            navigation: {
+               keyboardNavigation: "off",
+               keyboard_direction: "horizontal",
+               mouseScrollNavigation: "off",
+               mouseScrollReverse: "default",
+               onHoverStop: "off",
+               touch: {
+                  touchenabled: "on",
+                  touchOnDesktop: "off",
+                  swipe_threshold: 75,
+                  swipe_min_touches: 1,
+                  swipe_direction: "horizontal",
+                  drag_block_vertical: false
+               },
+               arrows: {
+                  style: "uranus",
+                  enable: true,
+                  hide_onmobile: true,
+                  hide_under: 600,
+                  hide_onleave: true,
+                  tmp: '',
+                  left: {
+                     h_align: "left",
+                     v_align: "center",
+                     h_offset: 15,
+                     v_offset: 0
+                  },
+                  right: {
+                     h_align: "right",
+                     v_align: "center",
+                     h_offset: 15,
+                     v_offset: 0
+                  }
+               }
+            },
+            visibilityLevels: [1200, 1040, 802, 480],
+            responsiveLevels: [4096, 1024, 778, 480],
+            gridwidth: [1140, 1024, 768, 480],
+            // gridheight: [600, 500, 500, 350],
+            gridheight:[795,795,795,700],
+            lazyType: "none",
+            shadow: 0,
+            spinner: "off",
+            stopLoop: "off",
+            stopAfterLoops: -1,
+            stopAtSlide: -1,
+            shuffle: "off",
+            autoHeight: "off",
+            hideThumbsOnMobile: "off",
+            hideSliderAtLimit: 0,
+            hideCaptionAtLimit: 0,
+            hideAllCaptionAtLilmit: 0,
+            debugMode: false,
+            fallbacks: {
+               simplifyAll: "off",
+               nextSlideOnWindowFocus: "off",
+               disableFocusListener: false,
+            }
+         });
+      }
+
    });
 
    /*columns layout*/
