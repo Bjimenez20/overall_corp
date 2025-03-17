@@ -232,12 +232,17 @@ p {
 }
 
 .darkcolor {
+   color: #000;
+}
+
+.darkcolortext {
+   color: #000
+}
+
+.darkcolorbaner {
    color: #fff;
 }
 
-.darkcolortext{
-   color: #000
-}
 
 .color {
    color: #00468e;
@@ -2461,7 +2466,7 @@ ul.bullet-list li::before {
    }
 }
 
- .testimonial-wrapp,
+.testimonial-wrapp,
 .testimonial-wrapp .testimonial-text,
 .testimonial-wrapp .testimonial-photo,
 .testimonial-wrapp .quoted,
@@ -2510,7 +2515,8 @@ ul.bullet-list li::before {
    display: flex;
    align-items: center;
    justify-content: center;
-   min-height: 150px; /* Ajustar según el contenido */
+   min-height: 150px;
+   /* Ajustar según el contenido */
 }
 
 #testimonial-grid .testimonial-wrapp .testimonial-text {
@@ -2753,19 +2759,28 @@ ul.bullet-list li::before {
    background: #f6f6f6;
 }
 
-.team-box:nth-child(3n-2) .overlay,
 .team-box.firstcolor .overlay {
-   background: silver;
+   background: url(../images/lideres/oscar.jpg) no-repeat;
 }
 
-.team-box:nth-child(3n) .overlay,
 .team-box.secondcolor .overlay {
-   background: silver;
+   background: url(../images/lideres/miryam.jpg) no-repeat;
 }
 
-.team-box:nth-child(2n) .overlay,
 .team-box.thirdcolor .overlay {
-   background: silver;
+   background: url(../images/lideres/juan.jpg) no-repeat;
+}
+
+.team-box.fortcolor .overlay {
+   background: url(../images/lideres/omar.jpg) no-repeat;
+}
+
+.team-box.fifecolor .overlay {
+   background: url(../images/lideres/rodrigo.jpg) no-repeat;
+}
+
+.team-box.sixcolor .overlay {
+   background: url(../images/lideres/melissa.jpg) no-repeat;
 }
 
 .team-box:hover .overlay {
