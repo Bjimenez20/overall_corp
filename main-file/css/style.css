@@ -277,7 +277,7 @@ p {
 }
 
 .font-xlight {
-   font-weight: 100;
+   font-weight: 50;
 }
 
 .font-bold {
@@ -829,7 +829,7 @@ a {
 
 .dropdown-toggle::after {
    content: "\f107";
-   font-family: 'Montserrat', sans-serif;
+   font-family: "FontAwesome";
    vertical-align: middle;
    height: auto;
    width: auto;
@@ -957,7 +957,7 @@ a {
 
 .dropdown-menu.megamenu .dropdown-item::before {
    content: "\f178";
-   font-family: "Montserrat";
+   font-family: "FontAwesome";
    opacity: 0;
    visibility: hidden;
    font-size: 10px;
@@ -1709,17 +1709,17 @@ a {
    padding-right: 15px;
 }
 
-@media (max-width: 768px) {
-   .tp-caption h1 {
-      font-size: 24px !important;
-      line-height: 30px !important;
-   }
+
+.tp-caption h1 {
+   font-size: clamp(18px, 5vw, 40px) !important;
+   line-height: 1.2 !important;
+   font-size: 29px !important;
 }
 
 @media (max-width: 480px) {
    .tp-caption h1 {
-      font-size: 18px !important;
-      line-height: 24px !important;
+      font-size: 22px !important;
+      /* line-height: 24px !important; */
    }
 }
 
@@ -1728,6 +1728,37 @@ a {
    margin: 0 auto;
 }
 
+.titulo{
+   font-weight: bold;
+}
+
+/*
+.tp-caption p {
+   font-size: clamp(18px, 5vw, 40px) !important;
+   line-height: 1.2 !important;
+}
+
+@media (max-width: 480px) {
+   .tp-caption p {
+      font-size: 22px !important;
+   }
+}
+
+.titulo p {
+   font-weight: 100 !important;
+   font-weight: bold !important;
+   text-align: justify !important;
+   color: white !important;
+   font-size: 30px !important;
+}
+
+.parrafo p {
+   font-weight: 200 !important;
+   color: white !important;
+   text-align: justify !important;
+   font-size: 15px !important;
+}
+*/
 
 /*arrows Slider*/
 .tparrows {
@@ -1739,12 +1770,12 @@ a {
 
 .tparrows.tp-leftarrow:before {
    content: "\f104";
-   font-family: 'Montserrat', sans-serif;
+   font-family: "FontAwesome";
 }
 
 .tparrows.tp-rightarrow:before {
    content: "\f105";
-   font-family: 'Montserrat', sans-serif;
+   font-family: "FontAwesome";
 }
 
 .tp-leftarrow,
@@ -3159,7 +3190,7 @@ blockquote.blockquote::before {
    font-size: 28px;
    margin-right: 5px;
    color: #a1a1a1;
-   font-family: "Montserrat";
+   font-family: "FontAwesome";
 }
 
 /*Profile Image*/
@@ -3316,7 +3347,6 @@ blockquote.blockquote::before {
 }
 
 /* ----- ABout US ----- */
-
 
 /* ----- Paralax bg  ----- */
 #parallax-bg {
@@ -3632,7 +3662,7 @@ blockquote.blockquote::before {
    background: #fff;
    content: "\f105";
    display: inline-block;
-   font-family: "Montserrat";
+   font-family: "FontAwesome";
    font-size: 20px;
    height: 100%;
    left: 0;
@@ -3668,7 +3698,7 @@ faq_content .tab_drawer_heading:after {
    display: inline-block;
    right: 20px;
    position: absolute;
-   font-family: 'Montserrat', sans-serif;
+   font-family: "FontAwesome";
 }
 
 .faq_content .items>li>a.expanded {
@@ -4180,7 +4210,7 @@ form.findus select {
 
 form.findus .select:after {
    content: "\f107";
-   font-family: Montserrat;
+   font-family: "FontAwesome";
    color: inherit;
    font-size: 16px;
    padding: 9px 8px;
