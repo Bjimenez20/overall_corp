@@ -2798,27 +2798,63 @@ ul.bullet-list li::before {
 }
 
 .team-box.firstcolor .overlay {
-   background: url(../images/lideres/oscar.jpg) no-repeat;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: url(../images/lideres/oscar.jpg) no-repeat center center;
+   background-size: cover;
 }
 
 .team-box.secondcolor .overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
    background: url(../images/lideres/miryam.jpg) no-repeat;
+   background-size: cover;
 }
 
 .team-box.thirdcolor .overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
    background: url(../images/lideres/juan.jpg) no-repeat;
+   background-size: cover;
 }
 
 .team-box.fortcolor .overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
    background: url(../images/lideres/omar.jpg) no-repeat;
+   background-size: cover;
 }
 
 .team-box.fifecolor .overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
    background: url(../images/lideres/rodrigo.jpg) no-repeat;
+   background-size: cover;
 }
 
 .team-box.sixcolor .overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
    background: url(../images/lideres/melissa.jpg) no-repeat;
+   background-size: cover;
 }
 
 .team-box:hover .overlay {
