@@ -120,7 +120,7 @@ p {
 
 /*Helper Classes*/
 .padding {
-   padding: 7.5rem 0
+   padding: 4.5rem;
 }
 
 .padding-top {
@@ -157,6 +157,12 @@ p {
 
 .bottom45 {
    margin-bottom: 45px;
+}
+
+.text-fun {
+   color: #fff;
+   text-align: center;
+   font-size: 2.5rem;
 }
 
 .top40 {
@@ -340,6 +346,30 @@ p {
    align-items: center;
 }
 
+.swiper-container {
+   background-color: #ccc;
+   padding: 20px;
+   border-radius: 10px;
+}
+
+.swiper-slide img {
+   width: 100px;
+   height: 100px;
+   object-fit: cover;
+   border-radius: 50%;
+   display: block;
+   margin: 0 auto;
+}
+
+
+.images img {
+   width: 150px;
+   height: 150px;
+   border-radius: 50%;
+   object-fit: cover;
+}
+
+
 .image,
 .image img {
    position: relative;
@@ -399,6 +429,18 @@ p {
 .white_transparent:hover,
 .white_transparent:focus {
    background: #fff;
+   color: #384141;
+}
+
+.boton_blue {
+   border: 1px solid #007bff !important;
+   background: transparent;
+   color: #000;
+}
+
+.boton_blue:hover,
+.boton_blue:focus {
+   background: #007bff;
    color: #384141;
 }
 
@@ -464,6 +506,14 @@ p {
 .btn_border:focus,
 .btn_danger:hover,
 .btn_danger:focus {
+   color: #fff;
+}
+
+.boton_blue {
+   color: #000;
+}
+
+.boton_blue:hover {
    color: #fff;
 }
 

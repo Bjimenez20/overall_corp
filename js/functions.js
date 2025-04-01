@@ -238,6 +238,22 @@ jQuery(function ($) {
       }
    }
 
+   document.addEventListener("DOMContentLoaded", function () {
+      var swiper = new Swiper(".mySwiper", {
+         slidesPerView: 4, // Muestra 4 imágenes al inicio
+         spaceBetween: 20,
+         loop: true,
+         pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+         },
+         autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+         },
+      });
+   });
+
    /*----Equal Heights----*/
    checheight();
    $(window).on("resize", function () {
@@ -547,55 +563,55 @@ jQuery(function ($) {
    });
 
    /*Video bg*/
-/*
-   $("#rev_slider_video").show().revolution({
-      sliderType: "standard",
-      sliderLayout: "fullscreen",
-      scrollbarDrag: "true",
-      dottedOverlay: "none",
-      navigation: {
-         touch: {
-            touchenabled: "on",
-            swipe_threshold: 75,
-            swipe_min_touches: 1,
-            swipe_direction: "horizontal",
-            drag_block_vertical: false,
+   /*
+      $("#rev_slider_video").show().revolution({
+         sliderType: "standard",
+         sliderLayout: "fullscreen",
+         scrollbarDrag: "true",
+         dottedOverlay: "none",
+         navigation: {
+            touch: {
+               touchenabled: "on",
+               swipe_threshold: 75,
+               swipe_min_touches: 1,
+               swipe_direction: "horizontal",
+               drag_block_vertical: false,
+            }
+         },
+         viewPort: {
+            enable: true,
+            outof: "pause",
+            visible_area: "90%"
+         },
+         responsiveLevels: [4096, 1024, 778, 480],
+         gridwidth: [1140, 1024, 768, 480],
+         gridheight: [600, 500, 500, 350],
+         lazyType: "none",
+         parallax: {
+            type: "scroll",
+            origo: "slidercenter",
+            speed: 1000,
+            levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50],
+         },
+         shadow: 0,
+         spinner: "off",
+         stopLoop: "off",
+         stopAfterLoops: -1,
+         stopAtSlide: -1,
+         shuffle: "off",
+         autoHeight: "off",
+         hideThumbsOnMobile: "off",
+         hideSliderAtLimit: 0,
+         hideCaptionAtLimit: 0,
+         hideAllCaptionAtLilmit: 0,
+         debugMode: false,
+         fallbacks: {
+            simplifyAll: "off",
+            nextSlideOnWindowFocus: "off",
+            disableFocusListener: false,
          }
-      },
-      viewPort: {
-         enable: true,
-         outof: "pause",
-         visible_area: "90%"
-      },
-      responsiveLevels: [4096, 1024, 778, 480],
-      gridwidth: [1140, 1024, 768, 480],
-      gridheight: [600, 500, 500, 350],
-      lazyType: "none",
-      parallax: {
-         type: "scroll",
-         origo: "slidercenter",
-         speed: 1000,
-         levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50],
-      },
-      shadow: 0,
-      spinner: "off",
-      stopLoop: "off",
-      stopAfterLoops: -1,
-      stopAtSlide: -1,
-      shuffle: "off",
-      autoHeight: "off",
-      hideThumbsOnMobile: "off",
-      hideSliderAtLimit: 0,
-      hideCaptionAtLimit: 0,
-      hideAllCaptionAtLilmit: 0,
-      debugMode: false,
-      fallbacks: {
-         simplifyAll: "off",
-         nextSlideOnWindowFocus: "off",
-         disableFocusListener: false,
-      }
-   });
-*/
+      });
+   */
    var tpj = jQuery;
    var revapi486;
    tpj(document).ready(function () {
@@ -646,7 +662,7 @@ jQuery(function ($) {
             visibilityLevels: [1200, 1040, 802, 480],
             responsiveLevels: [4096, 1024, 778, 480],
             gridwidth: [1140, 1024, 768, 480],
-            gridheight:[1000,700,700,700],
+            gridheight: [1000, 700, 700, 700],
             lazyType: "none",
             shadow: 0,
             spinner: "off",
@@ -717,7 +733,7 @@ jQuery(function ($) {
             responsiveLevels: [4096, 1024, 778, 480],
             gridwidth: [1140, 1024, 768, 480],
             // gridheight: [600, 500, 500, 350],
-            gridheight:[690,690,600,600],
+            gridheight: [690, 690, 600, 600],
             lazyType: "none",
             shadow: 0,
             spinner: "off",
@@ -787,7 +803,7 @@ jQuery(function ($) {
             responsiveLevels: [4096, 1024, 778, 480],
             gridwidth: [1140, 1024, 768, 480],
             // gridheight: [600, 500, 500, 350],
-            gridheight:[795,795,795,700],
+            gridheight: [795, 795, 795, 700],
             lazyType: "none",
             shadow: 0,
             spinner: "off",
