@@ -1759,6 +1759,28 @@ a {
    padding-right: 15px;
 }
 
+@media screen and (max-width: 768px) {
+   .tp-caption h1 {
+      font-size: 28px !important;
+      line-height: 28px !important;
+   }
+
+   .btn_common {
+      font-size: 14px !important;
+      padding: 10px 20px !important;
+   }
+
+   /* .tp-caption h1 {
+      word-wrap: break-word !important;
+      white-space: normal !important;
+   } */
+}
+
+.rev-slidebg {
+   object-fit: cover;
+   width: 100%;
+   height: 100%;
+}
 
 /* .tp-caption h1 {
    font-size: clamp(18px, 5vw, 40px) !important;
@@ -2498,6 +2520,23 @@ ul.bullet-list li::before {
 
 
 /* ----- Testimonials ----- */
+.testimonial-wrapp {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   text-align: center;
+   height: 100%;
+}
+
+.row .col-md-3 {
+   display: flex;
+}
+
+.testimonial-wrapp p {
+   min-height: 100px;
+   /* Ajusta según el contenido más largo */
+}
 
 .testimonial-photo {
    display: flex;
