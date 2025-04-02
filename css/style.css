@@ -1782,34 +1782,6 @@ a {
    height: 100%;
 }
 
-/* .tp-caption h1 {
-   font-size: clamp(18px, 5vw, 40px) !important;
-   line-height: 1.2 !important;
-   font-size: 29px !important;
-}
-
-@media (max-width: 480px) {
-   .tp-caption h1 {
-      font-size: 16px !important;
-      line-height: 1.3 !important;
-      white-space: normal !important;
-      word-break: break-word !important;
-   }
-
-   .tp-caption {
-      text-align: center !important;
-   }
-}
-
-.tp-caption {
-   max-width: 90%;
-   margin: 0 auto;
-}
-
-.titulo {
-   font-weight: bold;
-} */
-
 /*arrows Slider*/
 .tparrows {
    background: #00468e;
@@ -2529,9 +2501,9 @@ ul.bullet-list li::before {
    height: 100%;
 }
 
-.row .col-md-3 {
+/* .row .col-md-3 {
    display: flex;
-}
+} */
 
 .testimonial-wrapp p {
    min-height: 100px;
