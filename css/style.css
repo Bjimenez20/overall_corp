@@ -120,7 +120,7 @@ p {
 
 /*Helper Classes*/
 .padding {
-   padding: 4.5rem;
+   padding: 3rem 0; /* Reduce el padding vertical */
 }
 
 .padding-top {
